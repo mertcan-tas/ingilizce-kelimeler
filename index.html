@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="tr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>İngilizce Kelimeler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;--ink:#3c3c3c;--muted:#777777;--line:#e5e5e5;--tile:#ffffff;
+  --green:#58cc02;--green-dark:#58a700;--green-soft:#d7ffb8;--green-ink:#58a700;
+  --red:#ff4b4b;--red-dark:#ea2b2b;--red-soft:#ffdfe0;--red-ink:#ea2b2b;
+  --blue:#1cb0f6;--blue-dark:#1899d6;--blue-soft:#ddf4ff;
+  --gold:#ffc800;--gold-dark:#e5a400;--orange:#ff9600;--locked:#e5e5e5;--locked-dark:#cecece;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:#fff;overflow:hidden;overscroll-behavior:none}
+body{display:flex;flex-direction:column;height:100vh;height:100dvh;background:var(--bg);color:var(--ink);font-family:Nunito,-apple-system,"Segoe UI",sans-serif;font-weight:700;overflow-x:hidden}
+button,select{font-family:inherit;font-weight:800}
+button{cursor:pointer}
+
+.b3{border:0;border-radius:16px;padding:14px 20px;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--blue);box-shadow:0 4px 0 var(--blue-dark);transition:transform .05s,box-shadow .05s}
+.b3:active{transform:translateY(4px);box-shadow:none}
+.b3.green{background:var(--green);box-shadow:0 4px 0 var(--green-dark)}
+.b3.red{background:var(--red);box-shadow:0 4px 0 var(--red-dark)}
+.b3:disabled{background:var(--locked);color:var(--muted);box-shadow:0 4px 0 var(--locked-dark);cursor:default}
+.b3:disabled:active{transform:none}
+
+.lhead{flex:none;position:relative;z-index:7;background:var(--bg);max-width:820px;margin:0 auto;width:100%;padding:14px 16px 8px}
+.row{display:flex;align-items:center;gap:12px}
+.pick{appearance:none;-webkit-appearance:none;border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center/16px;color:var(--ink);font-size:14px;padding:8px 34px 8px 12px;max-width:62vw;min-width:0;flex:1}
+.dd{position:relative;flex:1;min-width:0}
+.ddbtn{display:flex;align-items:center;gap:8px;width:100%;background:#fff;border:2px solid var(--line);border-bottom-width:4px;border-radius:14px;padding:8px 12px;color:var(--ink);font-size:15px;text-align:left;transition:border-color .15s}
+.ddbtn:active{transform:translateY(2px);border-bottom-width:2px;margin-bottom:2px}
+
+.ddl{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ddn,.it .n{flex:none;background:var(--blue-soft);color:var(--blue-dark);border-radius:999px;padding:1px 9px;font-size:13px;font-weight:900}
+.chev{flex:none;width:18px;height:18px;color:var(--muted);transition:transform .2s}
+.dd.open .chev{transform:rotate(180deg)}
+.ddback{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+.dd.open .ddback{opacity:1;pointer-events:auto}
+.ddmenu{position:fixed;left:50%;top:50%;width:min(440px,calc(100vw - 32px));max-height:min(80vh,640px);display:flex;flex-direction:column;background:#fff;border-radius:22px;box-shadow:0 24px 60px rgba(0,0,0,.25);opacity:0;transform:translate(-50%,-46%) scale(.96);pointer-events:none;transition:opacity .18s,transform .22s cubic-bezier(.3,1.3,.5,1);z-index:31}
+.dd.open .ddmenu{opacity:1;transform:translate(-50%,-50%);pointer-events:auto}
+.mhead{display:flex;align-items:center;justify-content:space-between;padding:16px 16px 8px 20px}
+.mhead h2{margin:0;font-size:20px;font-weight:900}
+.mclose{background:none;border:2px solid var(--line);border-radius:12px;width:38px;height:38px;display:grid;place-items:center;color:var(--muted)}
+.mclose svg{width:18px;height:18px}
+.mlist{overflow:auto;padding:0 10px 14px}
+@media (max-width:560px){
+  .ddmenu{left:0;right:0;top:auto;bottom:0;width:100%;max-height:85vh;border-radius:22px 22px 0 0;transform:translateY(100%);padding-bottom:env(safe-area-inset-bottom)}
+  .dd.open .ddmenu{transform:none}
+  .mhead:before{content:"";position:absolute;left:50%;top:7px;width:44px;height:5px;margin-left:-22px;border-radius:5px;background:var(--line)}
+  .mhead{position:relative;padding-top:20px}
+}
+.grp{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 10px 6px}
+.it{display:flex;align-items:center;gap:10px;width:100%;background:none;border:2px solid transparent;border-radius:12px;padding:10px;color:var(--ink);font-size:15px;text-align:left}
+.it:hover{background:#f7f7f7}
+.it .ic{flex:none;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#fff}
+.it .ic svg{width:17px;height:17px}
+.it .t{flex:1;min-width:0}
+.it.on{background:var(--blue-soft);border-color:#84d8ff;color:var(--blue-dark)}
+.it.on .n{background:var(--blue);color:#fff}
+.it[disabled]{opacity:.45;cursor:default}
+.stat{display:flex;align-items:center;gap:4px;font-size:16px;font-weight:900;white-space:nowrap}
+.stat svg{width:22px;height:22px}
+.stat.fire{color:var(--orange)} .stat.okc{color:var(--green)} .stat.badc{color:var(--red)}
+.iconbtn{flex:none;background:none;border:2px solid var(--line);border-radius:12px;width:40px;height:40px;display:grid;place-items:center;color:var(--muted)}
+.iconbtn svg{width:20px;height:20px}
+.prow{display:flex;align-items:center;gap:10px;margin-top:12px}
+.pbar{flex:1;height:16px;background:var(--line);border-radius:999px;overflow:hidden;position:relative}
+.pbar i{position:absolute;inset:0 auto 0 0;background:var(--blue);border-radius:999px;transition:width .4s cubic-bezier(.3,1.4,.6,1);width:0}
+.pbar i:after{content:"";position:absolute;left:10px;right:10px;top:4px;height:4px;border-radius:4px;background:rgba(255,255,255,.35)}
+.pnum{font-size:14px;color:var(--muted);font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+main{flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+main::-webkit-scrollbar{display:none}
+.lbody{max-width:620px;margin:0 auto;width:100%;padding:14px 16px 24px}
+.combo{height:22px;font-size:14px;font-weight:900;color:var(--orange);letter-spacing:.04em;text-transform:uppercase;opacity:0;transition:opacity .2s}
+.combo.on{opacity:1}
+.kind{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:8px}
+.kind.ders{color:var(--orange)}
+.kind svg{width:18px;height:18px}
+.weak{display:none;align-items:center;gap:8px;background:#fff4e0;border:2px solid #ffd27a;color:#b56a00;border-radius:12px;padding:8px 12px;font-size:14px;font-weight:800;margin:0 0 14px}
+.weak.on{display:flex}
+.weak svg{flex:none;width:20px;height:20px}
+.qtext{font-size:22px;line-height:1.35;font-weight:800;margin:0 0 22px}
+.choices{display:grid;gap:12px}
+.ch{display:flex;align-items:center;gap:14px;text-align:left;width:100%;background:var(--tile);color:var(--ink);border:2px solid var(--line);border-bottom-width:5px;border-radius:16px;padding:14px 16px;font-size:17px;font-weight:700;line-height:1.3;transition:transform .05s}
+.ch:active{transform:translateY(2px)}
+.ch .k{flex:none;width:30px;height:30px;border:2px solid var(--line);border-radius:9px;display:grid;place-items:center;font-size:14px;color:var(--muted)}
+.ch.sel{border-color:#84d8ff;background:var(--blue-soft);color:var(--blue-dark)}
+.ch.sel .k{border-color:#84d8ff;color:var(--blue)}
+.ch.ok{border-color:var(--green);background:var(--green-soft);color:var(--green-ink);animation:pop .35s}
+.ch.ok .k{border-color:var(--green);color:var(--green-ink)}
+.ch.bad{border-color:var(--red);background:var(--red-soft);color:var(--red-ink);animation:shake .4s}
+.ch.bad .k{border-color:var(--red);color:var(--red-ink)}
+.locked .ch{pointer-events:none}
+.fade{animation:fin .3s ease-out}
+@keyframes fin{from{opacity:0;transform:translateX(24px)}}
+@keyframes pop{40%{transform:scale(1.04)}}
+@keyframes shake{20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
+
+.sheet{flex:none;position:relative;z-index:6;border-top:2px solid var(--line);background:var(--bg);transition:background .2s}
+.sheet .in{max-width:820px;margin:0 auto;padding:18px 16px calc(18px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.sheet .msg{flex:1;min-width:220px;display:none;align-items:flex-start;gap:14px}
+.sheet .badge{flex:none;width:58px;height:58px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.sheet .badge svg{width:34px;height:34px}
+.sheet h3{margin:2px 0 4px;font-size:22px;font-weight:900}
+.sheet p{margin:0;font-size:15px;font-weight:700;line-height:1.35}
+.sheet .b3{min-width:150px;margin-left:auto}
+.sheet.ok{background:var(--green-soft);border-color:transparent}
+.sheet.ok .msg{display:flex;color:var(--green-ink)}
+.sheet.ok .badge svg{color:var(--green)}
+.sheet.bad{background:var(--red-soft);border-color:transparent}
+.sheet.bad .msg{display:flex;color:var(--red-ink)}
+.sheet.bad .badge svg{color:var(--red)}
+.sheet.slide{animation:up .25s ease-out}
+@keyframes up{from{transform:translateY(40px);opacity:.3}}
+
+.done{display:none;text-align:center;padding:30px 0}
+.done.on{display:block}
+.done svg{width:130px;height:130px;animation:pop .6s}
+.done h1{font-size:28px;font-weight:900;color:var(--gold-dark);margin:14px 0 6px}
+.done p{color:var(--muted);font-size:16px;margin:0 0 24px}
+.done .b3{width:100%;max-width:360px}
+
+@media (max-width:560px){
+  .sheet .b3{width:100%;margin-left:0}
+  .qtext{font-size:20px}.ch{font-size:16px;padding:13px 14px}
+  .sheet .in{padding-top:14px}.sheet h3{font-size:20px}
+  .sheet .badge{width:46px;height:46px}.sheet .badge svg{width:28px;height:28px}
+  .row{gap:8px}.stat{font-size:15px}
+}
+main[data-fit="1"] .qtext{font-size:18px;margin-bottom:14px}
+main[data-fit="1"] .ch{font-size:15px;padding:10px 12px}
+main[data-fit="1"] .choices{gap:9px}
+main[data-fit="2"] .qtext{font-size:16px;line-height:1.3;margin-bottom:10px}
+main[data-fit="2"] .ch{font-size:14px;padding:8px 10px;border-bottom-width:4px;gap:10px}
+main[data-fit="2"] .ch .k{width:24px;height:24px;font-size:12px}
+main[data-fit="2"] .choices{gap:7px}
+main[data-fit="2"] .combo{height:0}
+main[data-fit="2"] .kind{margin-bottom:4px;font-size:12px}
+main[data-fit="2"] .weak{padding:6px 10px;font-size:13px;margin-bottom:8px}
+main[data-fit="3"] .qtext{font-size:14.5px;line-height:1.28;margin-bottom:8px}
+main[data-fit="3"] .ch{font-size:13px;line-height:1.22;padding:6px 9px;border-bottom-width:3px;border-radius:12px;gap:8px}
+main[data-fit="3"] .ch .k{width:21px;height:21px;font-size:11px;border-radius:7px}
+main[data-fit="3"] .choices{gap:5px}
+main[data-fit="3"] .combo{height:0}
+main[data-fit="3"] .kind{margin-bottom:2px;font-size:11px}
+main[data-fit="3"] .weak{padding:5px 9px;font-size:12px;margin-bottom:6px}
+main[data-fit="3"] .lbody{padding-top:8px;padding-bottom:8px}
+body[data-fit="2"] .sheet .in,body[data-fit="3"] .sheet .in,body[data-fit="4"] .sheet .in{padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom));gap:10px}
+body[data-fit="3"] .sheet h3,body[data-fit="4"] .sheet h3{font-size:17px;margin:0 0 2px}
+body[data-fit="3"] .sheet p,body[data-fit="4"] .sheet p{font-size:13px;line-height:1.3}
+body[data-fit="3"] .sheet .badge,body[data-fit="4"] .sheet .badge{width:36px;height:36px}
+body[data-fit="3"] .sheet .badge svg,body[data-fit="4"] .sheet .badge svg{width:22px;height:22px}
+body[data-fit="3"] .sheet .b3,body[data-fit="4"] .sheet .b3{padding:11px 16px;font-size:15px}
+body[data-fit="3"] .lhead .prow{margin-top:8px}
+body[data-fit="4"] .weak{display:none}
+main[data-fit="4"] .qtext{font-size:14px;line-height:1.25;margin-bottom:8px}
+main[data-fit="4"] .ch{font-size:12.5px;line-height:1.2;padding:5px 8px;border-bottom-width:3px;border-radius:11px;gap:8px}
+main[data-fit="4"] .ch .k{width:20px;height:20px;font-size:11px;border-radius:6px}
+main[data-fit="4"] .choices{gap:5px}
+main[data-fit="4"] .combo{height:0}
+main[data-fit="4"] .kind{display:none}
+main[data-fit="4"] .lbody{padding-top:6px;padding-bottom:6px}
+canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:10}
+.qtext{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.qtext .word{font-size:1.25em;font-weight:900}
+.qtext .hint{flex-basis:100%;font-size:.7em;color:var(--muted);font-weight:800}
+.spk{flex:none;width:40px;height:40px;border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;background:#fff;color:var(--blue);display:grid;place-items:center;padding:0}
+.spk svg{width:22px;height:22px}
+.spk:active{transform:translateY(2px);border-bottom-width:2px}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+
+<header class="lhead">
+  <div class="row">
+    <div class="dd" id="dd">
+      <button class="ddbtn" id="ddBtn" aria-haspopup="listbox" aria-expanded="false"><span class="ddl" id="ddLabel"></span><span class="ddn" id="ddCount"></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="ddback" id="ddBack"></div>
+      <div class="ddmenu" role="dialog" aria-modal="true" aria-label="Bölüm seç">
+        <div class="mhead"><h2>Bölüm seç</h2><button class="mclose" id="ddClose" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+        <div class="mlist" id="ddMenu" role="listbox"></div>
+      </div>
+    </div>
+    <div class="stat fire" title="Seri"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 3.5 5 5.5 5 11a5 5 0 0 1-10 0c0-2.5 1.2-4 2.3-5.2.3 1.6 1 2.7 2.2 3.2C11 8 11 5 12 2z"/></svg><span id="sCombo">0</span></div>
+    <button class="iconbtn" id="sndBtn" aria-label="Ses"></button>
+  </div>
+  <div class="prow">
+    <div class="pbar"><i id="pfill"></i></div>
+    <div class="pnum" id="pnum">0/0</div>
+  </div>
+</header>
+
+<main id="main"><div class="lbody">
+  <div id="qwrap">
+    <div class="combo" id="combo"></div>
+    <div class="kind" id="kind"></div>
+    <div class="weak" id="weak"></div>
+    <p class="qtext" id="qtext"></p>
+    <div class="choices" id="choices"></div>
+  </div>
+  <div class="done" id="done">
+    <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="#ffc800" opacity=".18"/><path d="M38 26h44v18a22 22 0 0 1-44 0z" fill="#ffc800"/><path d="M38 32H26a12 12 0 0 0 14 16M82 32h12a12 12 0 0 1-14 16" fill="none" stroke="#e5a400" stroke-width="6"/><rect x="54" y="64" width="12" height="16" fill="#e5a400"/><rect x="40" y="80" width="40" height="12" rx="4" fill="#ffc800"/><path d="M60 32l3.5 7 7.5 1-5.5 5.2 1.4 7.6L60 49.2l-6.9 3.6 1.4-7.6L49 40l7.5-1z" fill="#fff"/></svg>
+    <h1 id="doneTitle">Hepsi bitti!</h1>
+    <p id="doneText"></p>
+    <button class="b3" id="restart">Baştan başla</button>
+  </div>
+</div></main>
+
+<div class="sheet" id="sheet"><div class="in">
+  <div class="msg">
+    <div class="badge" id="badge"></div>
+    <div><h3 id="fbTitle"></h3><p id="fbText"></p></div>
+  </div>
+  <button class="b3" id="action" disabled>Kontrol et</button>
+</div></div>
+
+<script>
+const SECTIONS = {
+  ppl: "İnsanları Tanımlama",
+  clo: "Giyim ve Moda",
+  hair: "Saç ve Makyaj",
+  body: "İnsan Vücudu",
+  phr: "Kalıp Cümleler"
+};
+
+const W = [
+["ppl","to be","olmak",1],
+["ppl","to have","sahip olmak",1],
+["ppl","to look","bakmak / görünmek",1,"Kitapta \"görmek\" yazıyor; \"to see\" görmektir, \"to look\" bakmak ya da görünmek."],
+["ppl","to seem","görünmek, gibi gelmek"],
+["ppl","to weigh","tartmak / ağırlığında olmak"],
+["ppl","to describe","tanımlamak, tarif etmek"],
+["ppl","quite, rather","oldukça"],
+["ppl","very","çok",1],
+["ppl","too","fazlasıyla, gereğinden fazla"],
+["ppl","description","tanım",1],
+["ppl","appearance","görünüş"],
+["ppl","look","görünüm",1],
+["ppl","bearing","tavır, duruş"],
+["ppl","height, size","boy, ölçü / (elbise) beden"],
+["ppl","weight","ağırlık"],
+["ppl","sex","cinsiyet",1],
+["ppl","hair","saç",1],
+["ppl","beard","sakal"],
+["ppl","moustache","bıyık"],
+["ppl","eyes","gözler",1],
+["ppl","skin","ten",1],
+["ppl","complexion","yüz rengi, cilt"],
+["ppl","spot, pimple","sivilce"],
+["ppl","mole, beauty spot","ben"],
+["ppl","freckles","çiller"],
+["ppl","wrinkles","kırışıklıklar",0,"Kitapta yanlışlıkla \"bilekler\" yazıyor; bilek \"wrist\" demektir."],
+["ppl","dimples","gamzeler"],
+["ppl","glasses","gözlük",1],
+["ppl","young","genç",1],
+["ppl","old","yaşlı",1],
+["ppl","tall","uzun (boylu)",0,"Kitapta \"büyük\" yazıyor; insan için \"tall\" uzun boylu demektir."],
+["ppl","small, short","kısa (boylu), küçük",1],
+["ppl","of average height","orta boylu"],
+["ppl","fat","şişman",1],
+["ppl","obese","aşırı şişman, obez",1],
+["ppl","thin, skinny","zayıf, sıska"],
+["ppl","thin, slim","ince, narin"],
+["ppl","muscular","kaslı, adaleli"],
+["ppl","frail-looking","çelimsiz"],
+["ppl","beautiful, good-looking (woman)","güzel (kadın)",1],
+["ppl","good-looking, handsome","yakışıklı",1],
+["ppl","pretty","tatlı, sevimli"],
+["ppl","ugly","çirkin",1],
+["ppl","spotty","sivilceli",0,"Kitapta \"benekli / lekeli\" yazıyor; insan için \"spotty\" sivilceli demektir."],
+["ppl","sun-tanned, tanned","bronzlaşmış, güneşten yanmış"],
+["ppl","pale","solgun"],
+["ppl","wrinkled","buruşuk, kırışık"],
+["ppl","blue","mavi",1],
+["ppl","green","yeşil",1],
+["ppl","grey","gri",1],
+["ppl","brown","kahverengi",1],
+["ppl","hazel","ela",0,"Kitapta \"açık kahverengi\" yazıyor; göz rengi olarak ela demektir."],
+["ppl","black","siyah",1],
+["ppl","grey-blue","gri-mavi",1],
+["ppl","grey-green","gri-yeşil",1],
+
+["clo","to dress","giyinmek"],
+["clo","to undress","soyunmak"],
+["clo","to put on","giymek, üstüne geçirmek"],
+["clo","to take off","çıkarmak"],
+["clo","to try on","denemek, prova etmek"],
+["clo","to wear","giyiyor olmak, takmak",0,"\"Put on\" giyme hareketi, \"wear\" üstünde taşıma hâli: She is wearing a hat."],
+["clo","to have on","üstünde olmak, giymiş olmak"],
+["clo","to suit, to fit","yakışmak, uymak"],
+["clo","clothes","giysiler"],
+["clo","coat, overcoat","palto, manto"],
+["clo","raincoat","yağmurluk"],
+["clo","anorak","anorak"],
+["clo","jacket","ceket"],
+["clo","(sports) jacket","spor ceket"],
+["clo","suit","takım elbise (erkek)"],
+["clo","lady's suit","takım elbise (kadın)"],
+["clo","dinner jacket","smokin"],
+["clo","uniform","üniforma"],
+["clo","trousers","pantolon"],
+["clo","ski pants","kayak pantolonu"],
+["clo","jeans","kot pantolon, blucin"],
+["clo","dungarees","tulum"],
+["clo","track suit","eşofman"],
+["clo","shorts","şort"],
+["clo","dress","elbise"],
+["clo","evening dress","abiye elbise"],
+["clo","skirt","etek"],
+["clo","mini-skirt","mini etek"],
+["clo","jumper, sweater, pullover","kazak, süveter"],
+["clo","polo neck (jumper)","balıkçı yaka kazak",0,"Kitapta satırlar kaymış; \"polo yaka kazak\" ve \"yelek\" bir alt satıra düşmüş."],
+["clo","waistcoat","yelek"],
+["clo","cardigan","hırka"],
+["clo","shirt","gömlek"],
+["clo","blouse","bluz"],
+["clo","nightdress","gecelik"],
+["clo","pyjamas","pijama"],
+["clo","dressing gown","sabahlık"],
+["clo","bikini","bikini"],
+["clo","swimming costume","mayo"],
+["clo","underwear","iç çamaşırı"],
+["clo","panties","kadın külotu"],
+["clo","bra","sutyen"],
+["clo","vest","atlet, fanila"],
+["clo","(under) pants","külot, don"],
+["clo","T-shirt","tişört"],
+["clo","underskirt, petticoat","jüpon"],
+["clo","suspenders","jartiyer"],
+["clo","stockings","ince kadın çorabı"],
+["clo","tights","külotlu çorap"],
+["clo","socks","çorap"],
+["clo","knee-length socks","dizaltı çorap"],
+["clo","woollen socks","yün çorap"],
+["clo","cotton socks","pamuklu çorap"],
+["clo","shoes","ayakkabılar"],
+["clo","boots","çizmeler, botlar"],
+["clo","Wellington boots","lastik çizme"],
+["clo","trainers, gym shoes","spor ayakkabı"],
+["clo","ski boots","kayak çizmeleri"],
+["clo","sandals","sandaletler"],
+["clo","slippers","terlikler"],
+["clo","a pair of","bir çift"],
+["clo","sole","taban"],
+["clo","heel","topuk"],
+["clo","flat heels","düz topuklar"],
+["clo","stiletto heels","ince sivri topuklar"],
+["clo","hat","şapka",1],
+["clo","straw hat","hasır şapka"],
+["clo","sun hat","güneş şapkası",1],
+["clo","bonnet","bone",1],
+["clo","cap","kep, kasket, bere",1],
+["clo","scarf","kaşkol, atkı"],
+["clo","(head) scarf","başörtüsü"],
+["clo","gloves","eldivenler",1],
+["clo","mittens","tek parmaklı eldiven"],
+["clo","tie","kravat"],
+["clo","bow tie","papyon"],
+["clo","braces","pantolon askısı"],
+["clo","belt","kemer",1],
+["clo","collar","yaka"],
+["clo","button","düğme",1],
+["clo","cufflinks","kol düğmeleri"],
+["clo","zip","fermuar",1],
+["clo","shoelaces","ayakkabı bağları",1],
+["clo","ribbon","kurdele"],
+["clo","handkerchief","mendil",1],
+["clo","umbrella","şemsiye",1],
+["clo","handbag","el çantası",1],
+["clo","jewellery","mücevherat"],
+["clo","jewel","mücevher"],
+["clo","silver","gümüş"],
+["clo","gold","altın",1],
+["clo","precious stone","kıymetli taş"],
+["clo","pearl","inci"],
+["clo","diamond","elmas",1],
+["clo","emerald","zümrüt"],
+["clo","ruby","yakut",1],
+["clo","sapphire","safir"],
+["clo","ring","yüzük",1],
+["clo","earrings","küpeler"],
+["clo","bracelet, bangle","bilezik"],
+["clo","brooch","broş"],
+["clo","necklace","kolye, gerdanlık"],
+["clo","chain","zincir",1],
+["clo","pendant","kolye ucu, madalyon"],
+["clo","watch","kol saati"],
+["clo","pearl necklace","inci gerdanlık"],
+["clo","small","küçük",1],
+["clo","medium","orta",1],
+["clo","large","büyük",1],
+["clo","short","kısa",1],
+["clo","long","uzun",1],
+["clo","wide, loose-fitting","bol, geniş"],
+["clo","tight","dar"],
+["clo","size","beden",1],
+["clo","waist","bel"],
+["clo","shoe size","ayakkabı numarası",1],
+["clo","collar size","yaka ölçüsü"],
+["clo","hip measurement","kalça ölçüsü"],
+["clo","bust / chest measurement","göğüs ölçüsü"],
+["clo","waist measurement","bel ölçüsü"],
+["clo","style","stil, tarz"],
+["clo","model","model",1],
+["clo","colour","renk",1],
+["clo","shade","renk tonu",1,"Kitapta \"gölgelendirmek\" yazıyor; giyimde \"shade\" renk tonu demektir."],
+["clo","pattern, design","desen",1],
+["clo","plain","düz, tek renkli"],
+["clo","printed","baskılı, emprime"],
+["clo","embroidered","işlemeli"],
+["clo","check(ed)","kareli"],
+["clo","flowered, flowery","çiçekli"],
+["clo","with polka-dots, spotted","puantiyeli"],
+["clo","striped","çizgili"],
+["clo","elegant, smart","şık"],
+["clo","formal","resmi"],
+["clo","casual","günlük, rahat"],
+["clo","snazzy","gösterişli, göz alıcı",0,"Kitapta satırlar kaymış (\"spor\" yazıyor); \"snazzy\" gösterişli demektir."],
+["clo","sloppy","özensiz, pasaklı"],
+["clo","simple, plain","sade"],
+["clo","loud, gaudy","şatafatlı, cart"],
+["clo","fashionable","modaya uygun"],
+["clo","old-fashioned","eski moda, demode",1],
+["clo","low-cut, low-necked","dekolte"],
+["clo","fashion","moda"],
+["clo","(winter) collection","(kış) koleksiyonu",1],
+["clo","men's fashions","erkek giyim modası",1],
+["clo","menswear","erkek giyim"],
+["clo","ladies' fashions","kadın giyim modası"],
+["clo","ladies' wear","kadın giyim"],
+["clo","clothing industry","giyim sanayii"],
+["clo","dressmaking","terzilik"],
+["clo","off-the-peg clothes","hazır giyim"],
+["clo","dressmaker","terzi"],
+["clo","fashion designer","moda tasarımcısı",1],
+["clo","fashion model","manken",1],
+["clo","male model","erkek model",1],
+["clo","fashion show","defile",1],
+
+["hair","to comb","taramak"],
+["hair","to brush","fırçalamak"],
+["hair","to cut","kesmek"],
+["hair","to trim","uçlarını almak, kısaltmak"],
+["hair","to do one's hair","saçını yapmak"],
+["hair","to dye one's hair","saçını boyamak"],
+["hair","to bleach","saçı sarıya açmak"],
+["hair","to have a haircut","saçını kestirmek"],
+["hair","to have a blow-dry","fön çektirmek"],
+["hair","to look at oneself in the mirror","aynada kendine bakmak"],
+["hair","to put one's make-up on","makyaj yapmak"],
+["hair","to put on perfume","parfüm sürmek"],
+["hair","to paint one's nails","oje sürmek"],
+["hair","to shave","traş olmak"],
+["hair","medium-length (hair)","ne uzun ne kısa (saç)"],
+["hair","to be bald","kel olmak"],
+["hair","blonde, fair (hair)","sarışın, sarı (saç)"],
+["hair","red, ginger (hair)","kızıl (saç)",0,"Kitapta \"kırmızı\" yazıyor; saç için \"red / ginger\" kızıl demektir."],
+["hair","grey, greying (hair)","kır, kırlaşmış (saç)"],
+["hair","white (hair)","beyaz (saç)"],
+["hair","curly","kıvırcık"],
+["hair","wavy","dalgalı"],
+["hair","straight","düz"],
+["hair","thick","gür, kalın"],
+["hair","dyed","boyalı"],
+["hair","greasy","yağlı"],
+["hair","dry","kuru"],
+["hair","(hair) cut","saç kesimi"],
+["hair","perm","perma"],
+["hair","curl","bukle, lüle"],
+["hair","parting","saçın ayrılma çizgisi"],
+["hair","highlights, streaks","röfle",0,"Kitapta \"perçemler\" yazıyor; saçta \"highlights\" röfle demektir."],
+["hair","fringe","kakül, perçem"],
+["hair","pony tail","at kuyruğu"],
+["hair","braid, plait, pigtail","saç örgüsü"],
+["hair","comb","tarak"],
+["hair","hairbrush","saç fırçası"],
+["hair","hairslide","saç tokası"],
+["hair","hairpin","firkete"],
+["hair","roller, curler","bigudi"],
+["hair","tongs","maşa"],
+["hair","wig","peruk"],
+["hair","shampoo","şampuan"],
+["hair","gel","jöle"],
+["hair","hair spray","saç spreyi"],
+["hair","dandruff","kepek"],
+["hair","make-up","makyaj"],
+["hair","beauty","güzellik"],
+["hair","face cream","yüz kremi"],
+["hair","moisturizing cream","nemlendirici krem"],
+["hair","powder","pudra"],
+["hair","compact","pudriyer"],
+["hair","foundation cream","fondöten"],
+
+["body","foot","ayak"],
+["body","heel","topuk"],
+["body","toe","ayak parmağı"],
+["body","organ","organ",1],
+["body","limb","uzuv, kol-bacak"],
+["body","muscle","kas"],
+["body","bone","kemik",1],
+["body","skeleton","iskelet",1],
+["body","spine, spinal column","omurga, belkemiği"],
+["body","rib","kaburga kemiği"],
+["body","flesh","et"],
+["body","skin","cilt, deri",1],
+["body","heart","kalp",1],
+["body","lungs","akciğerler"],
+["body","digestive tract","sindirim sistemi"],
+["body","stomach","mide"],
+["body","liver","karaciğer"],
+["body","kidneys","böbrekler"],
+["body","bladder","mesane, idrar torbası"],
+["body","blood","kan",1],
+["body","vein","damar, toplardamar"],
+["body","artery","atardamar"],
+["body","the head","kafa, baş"],
+["body","skull","kafatası",1],
+["body","brain","beyin",1],
+["body","hair","saç",1],
+["body","face","yüz",1],
+["body","features","yüz hatları"],
+["body","forehead","alın"],
+["body","eyebrows","kaşlar"],
+["body","eyelashes","kirpikler"],
+["body","eye","göz",1],
+["body","eyelids","göz kapakları"],
+["body","pupil","göz bebeği"],
+["body","nose","burun",1],
+
+["phr","What's he/she like?","O nasıl biri?"],
+["phr","Can you describe him/her?","Onu tarif edebilir misiniz?"],
+["phr","I'm 1.75 metres tall.","1,75 boyundayım."],
+["phr","a man of medium height","orta boylu bir adam"],
+["phr","He behaves strangely.","Tuhaf davranıyor."],
+["phr","He looks a bit strange.","Biraz tuhaf görünüyor."],
+["phr","It's (made of) leather.","Deriden yapılmış."],
+["phr","She has a blue dress on.","Üstünde mavi bir elbise var."],
+["phr","I'd like something cheaper.","Daha ucuz bir şey istiyordum."],
+["phr","I'd like a skirt matching this shirt.","Bu gömleğe uygun bir etek istiyordum."],
+["phr","Can I try these trousers on?","Bu pantolonu deneyebilir miyim?"],
+["phr","What is your size / shoe size?","Bedeniniz / ayakkabı numaranız kaç?"],
+["phr","Red doesn't suit me.","Kırmızı bana yakışmaz."],
+["phr","These trousers suit you.","Bu pantolon size yakıştı."],
+["phr","I have to get changed first.","Önce üstümü değiştirmem gerek."]
+];
+
+const Q = [];
+W.forEach(([s,en,tr,m,note])=>{
+  [0,1].forEach(d=>Q.push({id:s+"|"+en+"|"+d,s,en,tr,m:!!m,d,note}));
+});
+const QI = Object.fromEntries(Q.map(x=>[x.id,x]));
+
+const STORE="ik-quiz-v1";
+let st={mode:"marked",queues:{},stats:{},sound:true};
+try{Object.assign(st,JSON.parse(localStorage.getItem(STORE))||{})}catch(e){}
+const persist=()=>{try{localStorage.setItem(STORE,JSON.stringify(st))}catch(e){}};
+const qs=id=>st.stats[id]||(st.stats[id]={w:0,r:0});
+const isWeak=id=>{const t=st.stats[id];return !!t&&t.w>=2&&t.w>=t.r};
+const $=id=>document.getElementById(id);
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+let AC=null;
+function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==="suspended")AC.resume();return AC}
+function tone(f,t0,dur,type="sine",vol=.22,slide=0){
+  const a=ac();if(!a||!st.sound)return;
+  const o=a.createOscillator(),g=a.createGain();
+  o.type=type;o.frequency.setValueAtTime(f,a.currentTime+t0);
+  if(slide)o.frequency.exponentialRampToValueAtTime(f*slide,a.currentTime+t0+dur);
+  g.gain.setValueAtTime(0,a.currentTime+t0);
+  g.gain.linearRampToValueAtTime(vol,a.currentTime+t0+.012);
+  g.gain.exponentialRampToValueAtTime(.0008,a.currentTime+t0+dur);
+  o.connect(g).connect(a.destination);o.start(a.currentTime+t0);o.stop(a.currentTime+t0+dur+.05);
+}
+const SFX={
+  tap(){tone(520,0,.06,"triangle",.12)},
+  ok(){tone(784,0,.14,"triangle",.25);tone(1175,.09,.28,"triangle",.25);tone(2350,.09,.18,"sine",.05)},
+  combo(){tone(784,0,.1,"triangle",.22);tone(988,.07,.1,"triangle",.22);tone(1319,.14,.3,"triangle",.24);tone(2637,.14,.2,"sine",.05)},
+  bad(){tone(233,0,.16,"square",.08,.92);tone(175,.12,.32,"square",.08,.85);tone(117,.12,.32,"sine",.18)},
+  win(){[523,659,784,1047].forEach((f,i)=>tone(f,i*.11,.22,"triangle",.22));tone(1319,.46,.6,"triangle",.22);tone(1568,.46,.6,"sine",.1);tone(2093,.62,.5,"sine",.06)}
+};
+let VOICE=null;
+function pickVoice(){const v=speechSynthesis.getVoices();VOICE=v.find(x=>x.lang==="en-GB")||v.find(x=>/^en/.test(x.lang))||null}
+if("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+function say(text,force){
+  if(!("speechSynthesis" in window)||(!st.sound&&!force))return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text.replace(/\(([^)]*)\)/g,"$1").replace(/\s*\/\s*/g,", "));
+  u.lang="en-GB";if(VOICE)u.voice=VOICE;u.rate=.9;speechSynthesis.speak(u);
+}
+const ICON={
+  on:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>',
+  off:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10H4z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>',
+  book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></svg>',
+  pen:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 3.5l5 5L9 20H4v-5z"/></svg>',
+  warn:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 21h22L12 2zm-1 7h2v6h-2V9zm0 8h2v2h-2v-2z"/></svg>'
+};
+function sndIcon(){$("sndBtn").innerHTML=st.sound?ICON.on:ICON.off}
+$("sndBtn").onclick=()=>{st.sound=!st.sound;persist();sndIcon();SFX.tap();if(!st.sound&&"speechSynthesis" in window)speechSynthesis.cancel()};
+
+function weakList(){
+  return Object.keys(st.stats).filter(id=>QI[id]&&st.stats[id].w>0)
+    .sort((a,b)=>(st.stats[b].w-st.stats[b].r)-(st.stats[a].w-st.stats[a].r)||st.stats[b].w-st.stats[a].w);
+}
+const MODES=[
+  ["marked","İşaretli kelimeler"],
+  ["weak","Zayıf kelimelerim"],
+  ["all","Tüm kelimeler"],
+  ["en","Sadece İngilizce → Türkçe"],
+  ["tr","Sadece Türkçe → İngilizce"]
+].concat(Object.keys(SECTIONS).map(k=>[k,SECTIONS[k]]));
+function filterFor(m){
+  if(m==="all")return Q;
+  if(m==="marked")return Q.filter(x=>x.m);
+  if(m==="en")return Q.filter(x=>x.d===0);
+  if(m==="tr")return Q.filter(x=>x.d===1);
+  return Q.filter(x=>x.s===m);
+}
+function poolFor(m){return m==="weak"?weakList():shuffle(filterFor(m).map(x=>x.id))}
+function count(m){return m==="weak"?weakList().length:filterFor(m).length}
+const MODE_STYLE={
+  marked:["#ff86d0",'<path d="M15.5 3.5l5 5L9 20H4v-5z" fill="currentColor"/>'],
+  all:["#1cb0f6",'<path d="M4 5h16M4 12h16M4 19h16" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>'],
+  en:["#58cc02",'<path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'],
+  tr:["#ff9600",'<path d="M20 12H6M11 6l-6 6 6 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'],
+  weak:["#ff4b4b",'<path d="M12 3 2 20h20L12 3zm-1 6h2v5h-2V9zm0 7h2v2h-2v-2z" fill="currentColor"/>']
+};
+const UNIT_COL={ppl:"#ce82ff",clo:"#1cb0f6",hair:"#ff9600",body:"#ff4b4b",phr:"#00cd9c"};
+const BOOK_ICON='<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" fill="none"/>';
+function fillModes(){
+  const cur=MODES.find(m=>m[0]===st.mode)||MODES[0];
+  $("ddLabel").textContent=cur[1];$("ddCount").textContent=count(cur[0]);
+  const m=$("ddMenu");m.innerHTML="";
+  const group=t=>{const g=document.createElement("div");g.className="grp";g.textContent=t;m.appendChild(g)};
+  const item=([k,l])=>{
+    const sty=MODE_STYLE[k]||[UNIT_COL[k],BOOK_ICON],n=count(k);
+    const b=document.createElement("button");b.className="it"+(k===st.mode?" on":"");b.setAttribute("role","option");
+    if(!n)b.disabled=true;
+    b.innerHTML='<span class="ic" style="background:'+sty[0]+'"><svg viewBox="0 0 24 24">'+sty[1]+'</svg></span><span class="t"></span><span class="n">'+n+'</span>';
+    b.querySelector(".t").textContent=l;
+    b.onclick=()=>{closeDd();if(k!==st.mode){st.mode=k;load(false)}SFX.tap()};
+    m.appendChild(b);
+  };
+  group("Önce bunlar");["marked","weak"].forEach(k=>item(MODES.find(x=>x[0]===k)));
+  group("Tümü");["all","en","tr"].forEach(k=>item(MODES.find(x=>x[0]===k)));
+  group("Bölümler");MODES.filter(x=>UNIT_COL[x[0]]).forEach(item);
+}
+function closeDd(){$("dd").classList.remove("open");document.body.style.overflow="";$("ddBtn").setAttribute("aria-expanded","false")}
+$("ddBtn").onclick=e=>{const o=$("dd").classList.toggle("open");document.body.style.overflow=o?"hidden":"";$("ddBtn").setAttribute("aria-expanded",o);SFX.tap()};
+$("ddBack").onclick=closeDd;$("ddClose").onclick=()=>{closeDd();SFX.tap()};
+
+const parts=t=>t.toLowerCase().replace(/\([^)]*\)/g,"").split(/[,/]/).map(p=>p.trim()).filter(Boolean);
+function overlaps(a,b){const pa=parts(a);return parts(b).some(p=>pa.includes(p))}
+function build(x){
+  const ans=x.d===0?x.tr:x.en,prompt=x.d===0?x.en:x.tr;
+  const key=y=>x.d===0?y.tr:y.en,other=y=>x.d===0?y.en:y.tr;
+  const ok=y=>y.d===0&&!overlaps(key(y),ans)&&!overlaps(other(y),prompt);
+  const pick=[];
+  for(const pool of [shuffle(Q.filter(y=>y.s===x.s&&ok(y))),shuffle(Q.filter(y=>y.s!==x.s&&(x.s==="phr")===(y.s==="phr")&&ok(y)))]){
+    for(const y of pool){if(pick.length>=3)break;if(!pick.some(p=>overlaps(key(p),key(y))))pick.push(y)}
+  }
+  const o=shuffle([ans,...pick.map(key)]);
+  return {o,a:o.indexOf(ans),prompt};
+}
+
+let S=null;
+function load(reset){
+  let q=st.queues[st.mode];
+  if(reset||!q||(!q.left.length&&!q.total)){
+    const ids=poolFor(st.mode);
+    q=st.queues[st.mode]={left:ids,total:ids.length,solved:0};
+  }
+  q.left=q.left.filter(id=>QI[id]);
+  S={q,combo:0,cur:null,sel:null,phase:"pick"};
+  persist();fillModes();next();
+}
+function next(){
+  const q=S.q;
+  $("combo").classList.remove("on");
+  if(!q.left.length)return finished();
+  $("done").classList.remove("on");$("qwrap").style.display="";
+  const x=QI[q.left[0]],b=build(x);
+  S.cur=x;S.b=b;S.sel=null;S.phase="pick";
+  $("kind").className="kind"+(x.m?" ders":"");
+  $("kind").innerHTML=(x.m?ICON.pen:ICON.book)+(x.d===0?"İngilizce → Türkçe":"Türkçe → İngilizce")+" · "+SECTIONS[x.s];
+  const t=st.stats[x.id],wk=$("weak");
+  if(t&&t.w>0){
+    wk.innerHTML=ICON.warn+"<span></span>";
+    wk.lastChild.textContent=isWeak(x.id)?"Bu kelimede genellikle yanlış yapıyorsun ("+t.w+" yanlış, "+t.r+" doğru). Dikkat!":"Bu kelimeyi daha önce "+t.w+" kez yanlış yaptın.";
+    wk.classList.add("on");
+  }else wk.classList.remove("on");
+  const qt=$("qtext");qt.innerHTML="";
+  const w=document.createElement("span");w.className="word";w.textContent=b.prompt;qt.appendChild(w);
+  if(x.d===0){
+    const sp=document.createElement("button");sp.className="spk";sp.setAttribute("aria-label","Dinle");sp.innerHTML=ICON.on;sp.onclick=()=>say(x.en,true);qt.appendChild(sp);
+  }
+  const h=document.createElement("span");h.className="hint";h.textContent=x.d===0?"Türkçesi hangisi?":"İngilizcesi hangisi?";qt.appendChild(h);
+  const c=$("choices");c.innerHTML="";c.classList.remove("locked");
+  b.o.forEach((txt,oi)=>{
+    const bt=document.createElement("button");bt.className="ch";bt.dataset.oi=oi;
+    bt.innerHTML='<span class="k">'+"ABCD"[oi]+'</span><span></span>';bt.lastChild.textContent=txt;
+    bt.onclick=()=>pick(oi);
+    c.appendChild(bt);
+  });
+  const qw=$("qwrap");qw.classList.remove("fade");void qw.offsetWidth;qw.classList.add("fade");
+  $("sheet").className="sheet";$("sheet").style.display="";
+  const a=$("action");a.disabled=true;a.className="b3";a.textContent="Kontrol et";
+  progress();$("main").scrollTop=0;fit();
+  if(x.d===0)say(x.en);
+}
+function pick(oi){
+  if(S.phase!=="pick")return;
+  S.sel=oi;SFX.tap();
+  document.querySelectorAll(".ch").forEach(b=>b.classList.toggle("sel",+b.dataset.oi===oi));
+  $("action").disabled=false;
+}
+function check(){
+  const x=S.cur,b=S.b,ok=S.sel===b.a,q=S.q;
+  S.phase="fb";
+  $("choices").classList.add("locked");
+  document.querySelectorAll(".ch").forEach(el=>{
+    const oi=+el.dataset.oi;el.classList.remove("sel");
+    if(oi===b.a)el.classList.add("ok");else if(oi===S.sel)el.classList.add("bad");
+  });
+  const t=qs(x.id);ok?t.r++:t.w++;t.last=Date.now();
+  q.left.shift();
+  $("sheet").className="sheet slide "+(ok?"ok":"bad");
+  $("badge").innerHTML=ok?ICON.check:ICON.x;
+  const a=$("action");a.className="b3"+(ok?" green":" red");a.textContent="Devam";
+  const pair=x.en+" = "+x.tr+(x.note?" · "+x.note:"");
+  if(ok){
+    S.combo++;q.solved++;
+    const praise=["Harika!","Mükemmel!","Süper!","Aferin!","Tam isabet!","Çok iyi!"];
+    $("fbTitle").textContent=S.combo>=3?S.combo+" doğru üst üste!":praise[Math.floor(Math.random()*praise.length)];
+    $("fbText").textContent=pair;
+    S.combo>=3?SFX.combo():SFX.ok();
+    if(S.combo>=3&&S.combo%3===0)burst(30);
+  }else{
+    S.combo=0;
+    q.left.splice(Math.min(4,q.left.length),0,x.id);
+    $("fbTitle").textContent="Doğru cevap:";
+    $("fbText").textContent=pair+(t.w>=2?" (Bu kelimeyi toplam "+t.w+" kez yanlış yaptın.)":"");
+    SFX.bad();
+    if(navigator.vibrate)try{navigator.vibrate(120)}catch(e){}
+  }
+  if(x.d===1)setTimeout(()=>say(x.en),350);
+  const okb=document.querySelector(".ch.ok");requestAnimationFrame(()=>{if(okb&&okb.getBoundingClientRect().bottom>$("main").getBoundingClientRect().bottom-8)okb.scrollIntoView({block:"nearest",behavior:"smooth"})});
+  $("sCombo").textContent=S.combo;
+  $("combo").textContent=S.combo>=2?S.combo+" seri!":"";
+  $("combo").classList.toggle("on",S.combo>=2);
+  persist();progress();fit();
+}
+function fit(){
+  const m=$("main");let f=0;m.dataset.fit=0;document.body.dataset.fit=0;
+  while(f<4&&m.scrollHeight>m.clientHeight+1){f++;m.dataset.fit=f;document.body.dataset.fit=f}
+}
+addEventListener("resize",()=>{if(S)fit()});
+function progress(){
+  const q=S.q;
+  $("pfill").style.width=(q.total?q.solved/q.total*100:0)+"%";
+  $("pnum").textContent=q.solved+"/"+q.total;
+}
+function finished(){
+  $("qwrap").style.display="none";$("sheet").style.display="none";
+  $("done").classList.add("on");
+  const q=S.q;
+  if(!q.total){$("doneTitle").textContent="Burada kelime yok";$("doneText").textContent=st.mode==="weak"?"Henüz yanlış yaptığın kelime yok.":"";return}
+  const weakN=weakList().filter(id=>isWeak(id)).length;
+  $("doneTitle").textContent="Hepsi bitti!";
+  $("doneText").textContent=q.total+" sorunun hepsini doğru cevapladın."+(weakN?" "+weakN+" kelime hâlâ zayıf, \"Zayıf kelimelerim\"den tekrar et.":"");
+  progress();SFX.win();setTimeout(()=>burst(160),150);
+}
+$("restart").onclick=()=>{SFX.tap();load(true)};
+$("action").onclick=()=>{
+  if(S.phase==="pick"){if(S.sel!==null)check()}
+  else{SFX.tap();fillModes();next()}
+};
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape")return closeDd();
+  if($("dd").classList.contains("open"))return;
+  if(S&&S.phase==="pick"&&/^[1-4a-dA-D]$/.test(e.key))pick(/\d/.test(e.key)?+e.key-1:"abcd".indexOf(e.key.toLowerCase()));
+  if(e.key==="Enter"){e.preventDefault();if($("done").classList.contains("on"))$("restart").click();else $("action").click()}
+});
+document.addEventListener("pointerdown",ac,{once:true});
+
+const cv=$("fx"),cx=cv.getContext("2d");let bits=[],raf=0;
+function size(){cv.width=innerWidth*devicePixelRatio;cv.height=innerHeight*devicePixelRatio}
+addEventListener("resize",size);size();
+function burst(n){
+  const cols=["#58cc02","#1cb0f6","#ffc800","#ff4b4b","#ce82ff","#ff9600"];
+  for(let i=0;i<n;i++)bits.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.5,y:innerHeight*.35,vx:(Math.random()-.5)*14,vy:-Math.random()*14-4,r:Math.random()*360,vr:(Math.random()-.5)*20,w:6+Math.random()*7,h:8+Math.random()*8,c:cols[i%cols.length],life:0});
+  if(!raf)loop();
+}
+function loop(){
+  cx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);cx.clearRect(0,0,innerWidth,innerHeight);
+  bits.forEach(p=>{p.vy+=.38;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;p.life++;
+    cx.save();cx.translate(p.x,p.y);cx.rotate(p.r*Math.PI/180);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});
+  bits=bits.filter(p=>p.y<innerHeight+40&&p.life<400);
+  raf=bits.length?requestAnimationFrame(loop):0;
+  if(!raf)cx.clearRect(0,0,innerWidth,innerHeight);
+}
+
+sndIcon();load(false);
+</script>
+</body>
+</html>
