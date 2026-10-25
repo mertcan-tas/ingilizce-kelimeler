@@ -171,9 +171,6 @@ canvas#fx{position:fixed;inset:0;pointer-events:none;z-index:10}
 .qtext{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
 .qtext .word{font-size:1.25em;font-weight:900}
 .qtext .hint{flex-basis:100%;font-size:.7em;color:var(--muted);font-weight:800}
-.spk{flex:none;width:40px;height:40px;border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;background:#fff;color:var(--blue);display:grid;place-items:center;padding:0}
-.spk svg{width:22px;height:22px}
-.spk:active{transform:translateY(2px);border-bottom-width:2px}
 </style>
 </head>
 <body>
@@ -586,15 +583,6 @@ const SFX={
   bad(){tone(233,0,.16,"square",.08,.92);tone(175,.12,.32,"square",.08,.85);tone(117,.12,.32,"sine",.18)},
   win(){[523,659,784,1047].forEach((f,i)=>tone(f,i*.11,.22,"triangle",.22));tone(1319,.46,.6,"triangle",.22);tone(1568,.46,.6,"sine",.1);tone(2093,.62,.5,"sine",.06)}
 };
-let VOICE=null;
-function pickVoice(){const v=speechSynthesis.getVoices();VOICE=v.find(x=>x.lang==="en-GB")||v.find(x=>/^en/.test(x.lang))||null}
-if("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
-function say(text,force){
-  if(!("speechSynthesis" in window)||(!st.sound&&!force))return;
-  speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(text.replace(/\(([^)]*)\)/g,"$1").replace(/\s*\/\s*/g,", "));
-  u.lang="en-GB";if(VOICE)u.voice=VOICE;u.rate=.9;speechSynthesis.speak(u);
-}
 const ICON={
   on:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>',
   off:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10H4z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6"/></svg>',
@@ -605,7 +593,7 @@ const ICON={
   warn:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 21h22L12 2zm-1 7h2v6h-2V9zm0 8h2v2h-2v-2z"/></svg>'
 };
 function sndIcon(){$("sndBtn").innerHTML=st.sound?ICON.on:ICON.off}
-$("sndBtn").onclick=()=>{st.sound=!st.sound;persist();sndIcon();SFX.tap();if(!st.sound&&"speechSynthesis" in window)speechSynthesis.cancel()};
+$("sndBtn").onclick=()=>{st.sound=!st.sound;persist();sndIcon();SFX.tap()};
 
 function weakList(){
   return Object.keys(st.stats).filter(id=>QI[id]&&st.stats[id].w>0)
@@ -700,9 +688,6 @@ function next(){
   }else wk.classList.remove("on");
   const qt=$("qtext");qt.innerHTML="";
   const w=document.createElement("span");w.className="word";w.textContent=b.prompt;qt.appendChild(w);
-  if(x.d===0){
-    const sp=document.createElement("button");sp.className="spk";sp.setAttribute("aria-label","Dinle");sp.innerHTML=ICON.on;sp.onclick=()=>say(x.en,true);qt.appendChild(sp);
-  }
   const h=document.createElement("span");h.className="hint";h.textContent=x.d===0?"Türkçesi hangisi?":"İngilizcesi hangisi?";qt.appendChild(h);
   const c=$("choices");c.innerHTML="";c.classList.remove("locked");
   b.o.forEach((txt,oi)=>{
@@ -715,7 +700,6 @@ function next(){
   $("sheet").className="sheet";$("sheet").style.display="";
   const a=$("action");a.disabled=true;a.className="b3";a.textContent="Kontrol et";
   progress();$("main").scrollTop=0;fit();
-  if(x.d===0)say(x.en);
 }
 function pick(oi){
   if(S.phase!=="pick")return;
@@ -752,7 +736,6 @@ function check(){
     SFX.bad();
     if(navigator.vibrate)try{navigator.vibrate(120)}catch(e){}
   }
-  if(x.d===1)setTimeout(()=>say(x.en),350);
   const okb=document.querySelector(".ch.ok");requestAnimationFrame(()=>{if(okb&&okb.getBoundingClientRect().bottom>$("main").getBoundingClientRect().bottom-8)okb.scrollIntoView({block:"nearest",behavior:"smooth"})});
   $("sCombo").textContent=S.combo;
   $("combo").textContent=S.combo>=2?S.combo+" seri!":"";
